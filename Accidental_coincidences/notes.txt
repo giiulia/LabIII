@@ -1,0 +1,5 @@
+measures taken in 5 minutes
+
+---------------------------
+The std gives the value of tau, the number obtained is 248.803;
+points between -154 and -120; and points between 121 and 154 are not considered for the line (too high) neither for the gaussian (too low)
