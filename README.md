@@ -25,4 +25,4 @@ The instrumentation preparation phase was organized as follows.
 # Flux and velocity measures
 - My group verified the zenith angle dependence of the muon flux according the cos<sup>2</sup>($\theta$) function and its East-West [asymmetry](/Est_Ovest_asymmetry) due to the Earth's magnetic field.
 - [Trajectory simulations](/Trajectory_simulation) helped evaluate the maximum the maximum viable path in the detector for a muon for it to be detected by both scintillators (necessary to measure velocity).
-- A plot of different relative distances for the scintillators and the time elapsed between passing through one detector and the other has been interpolated with a line in order to determine the average [muons velocity](/Muons_velocity) to the ground.
+- A plot of different relative distances S1-S2 and the time elapsed between passing through one detector and the other has been interpolated with a line in order to determine the average [muons velocity](/Muons_velocity) to the ground.
