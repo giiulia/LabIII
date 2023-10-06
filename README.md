@@ -4,11 +4,11 @@ The goal of my group's experiment was to determine the velocity and flux of cosm
 The steps and measures needed to complete the project are listed in the [project sheet](/muons_factsheet.pdf) and their execution is well described in this repository.
 
 # Instrumentation
-The instrumentation needed to detect the passage of cosmic muons in our laboratory and process the signals:
-- Scintillators S1 and S2 30x80 cm<sup>2</sup>.
-- Test scintillators T1 and T2 (smaller).
-- Threshold discriminator.
-- Coincidence unit.
+To detect the passage of cosmic muons in our laboratory and process the signals were used:
+- 2 scintillators S1 and S2 with an area of 30x80 cm<sup>2</sup>.
+- 2 test scintillators T1 and T2 (smaller).
+- A Threshold discriminator, when a linear signal exceeds the set threshold, it produces a logic signal.
+- A Coincidence unit, receives two or more inear signals and provides a logical output if the time interval between the inputs is less than a fixed time limit.
 - TDC ("Time to Digital Converter"), converts the time interval between the logical start and logical stop inputs to a linear signal whose amplitude is proportional to the said time interval.
 - ADC ("Analog to Digital Converter"), can address multiple linear inputs and a logic input (gate). When the gate is open the analog signals are recorded by distributing their amplitude in 1024 channels.
 - LEMO cables to induce delays.
@@ -17,13 +17,12 @@ The instrumentation needed to detect the passage of cosmic muons in our laborato
 
 # Optimization and characterization of scintillators
 The instrumentation preparation phase was organized as follows.
-- Search for the optimal threshold to remove noise and background signals. This process was necessary both for [large](/Threshold_big_scintillators) and [small](/Threshold_small_scintillators) scintillators.
+- Search for the optimal [threshold](/Threshold_optimization) to remove noise and background signals. This process was necessary both for [large](/Threshold_optimization/Large_scintillators) and [small](/Threshold_optimization/Small_scintillators) scintillators.
 - Choosing the optimal supply voltage to achieve the best [efficiency](/Efficiency).
-- Evaluation the rate of [accidental coincidences](/Accidental_coincidences).
-- [TDC calibration](/TDC_calibration)
+- Linear [TDC calibration](/TDC_calibration), necessary to interpret the number of channels in terms of nanoseconds.
+- Evaluation the rate of [accidental coincidences](/Accidental_coincidences), to extablish whether the number of counts should be corrected before the muon flux is determined.
 
 # Flux and velocity measures
-- [asymmetry](/Est_Ovest_asymmetry)
+- My group verified the dependence from the zenith angleof the muon flux according the function cos<sup>2</sup>($\theta$) and its Est-Ovest [asymmetry](/Est_Ovest_asymmetry) due to Earth's magnetic field.
 - [trajectory simulation](/Trajectory_simulation)
 - [velocity](/Muons_velocity)
-- 
