@@ -7,8 +7,8 @@ The steps and measures needed to complete the project are listed in the [project
 To detect the passage of cosmic muons in our laboratory and process the signals were used:
 - 2 scintillators S1 and S2 with an area of 30x80 cm<sup>2</sup>.
 - 2 test scintillators T1 and T2 (smaller).
-- A **Threshold discriminator**, when a linear signal exceeds the set threshold, it produces a logic signal.
-- A **Coincidence unit**, receives two or more inear signals and provides a logical output if the time interval between the inputs is less than a fixed time limit.
+- A **threshold discriminator**, when a linear signal exceeds the set threshold, it produces a logic signal.
+- A **coincidence unit**, receives two or more inear signals and provides a logical output if the time interval between the inputs is less than a fixed time limit.
 - **TDC** ("Time to Digital Converter"), converts the time interval between the logical start and logical stop inputs to a linear signal whose amplitude is proportional to the said time interval.
 - **ADC** ("Analog to Digital Converter"), can address multiple linear inputs and a logic input (gate). When the gate is open the analog signals are recorded by distributing their amplitude in 1024 channels.
 - LEMO cables to induce delays.
