@@ -1,9 +1,13 @@
 # Derivation of the muon velocity
 
-The **main program** here to look at is [muon_velocity.cpp](/Muons_velocity/muon_velocity.cpp),it [plots](/Muons_velocity/velocity_graph.pdf) foue points of times VS distance covered in average by muons
-and with a linear fit it derives angular coefficient and intercept. From the former we were able to get the velocity of muons passing the detetctors.
+The goal is to extrapolate the muon velocity from the [plot](/Muons_velocity/velocity_graph.pdf) of four points of times VS average distances traveled by muons. Through a linear fit, we derived the angular coefficient m and the intercept q; from the former we could calculate the velocity of muons passing in front of the detectors: v [m/s] = 1/m * 10<sup>9</sup>.
 
-The time measurements had to undergo preliminary correction because of amplitude errors that occur when the energy deposited by different particles is not the same. 
+The graphs that display the [energy distribution](/Muons_velocity/Graphs/Energy_distributions) for detector 1 and 2 (outputs of ADC1 and ADC2) show that energy deposited by different particles is not the same, it can vary and the most frequent energies are collected in a range between 120 ch - 380ch for ADC1 and 60ch - 240ch for ADC2. We consider energy intervals like this the most populated by muons since those particles will have similar energy; therefore only counts associated with this intervals are considered for the time measurements.
+The time measurements had to undergo a subsequent preliminary correction because of amplitude errors that occur when energy deposited by the same particle in different detectors is not the same.
+
 Correction calculations were done through:
-- [t_profile.cpp](/Muons_velocity/t_profile.cpp)
-- [calc_mean_parameters](/Muons_velocity/calc_mean_parameters.cpp)
+- [t_profile.cpp](/Muons_velocity/t_profile.cpp), this program creates a particular yet useful TGraphErrors Time VS Energy in a way that events with similar energy are meadiated into only one mean point of the graph in this way the apparent dependence of the time interval from ADC1 or ADC2 is quantified with numerical parameters tau and Vs (wich we presume different for scintillator 1 and 2).
+- [calc_mean_parameters.cpp](/Muons_velocity/calc_mean_parameters.cpp), having four distances we were able to meadiate between them to have only one estimate for parameter.
+- [check_times.cpp](/Muons_velocity/check_times.cpp), new data files were created using the mediated parameters and considering only events in the energy range of choice. This time intervals are now correct and we can onserve the constant trend by the graphs labeled with the word "corrected".
+
+The times are corrected, how about the distances? We know that the mean distance traveled by muons is not the one corresponding to the vertical direction but can be estrapolated by the mean of the histogram generated with previous [simulations](/Trajectory_simulation). Those are the data used to plot Times VS Distances, note that in this graph are considered sistematic errors due to the subjective choice done in the detemination of the ADC channels to consider. In order to estimate the error due to this choice we have made different choices of energy range and evaluated the difference occurred in the determination of mean time interval in nanoseconds that range.
